@@ -1,9 +1,11 @@
+import './Country.css'
 
-
-const Country = () => {
+const Country = ({country}) => {
+    const {name, flags} = country;
     return (
-        <div>
-            <h3>Name</h3>
+        <div className='country'>
+            <h3>Name : {name.common} </h3>
+            <img src={flags.png} alt="" />
         </div>
     );
 };
